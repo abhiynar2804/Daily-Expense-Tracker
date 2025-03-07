@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <!-- login page -->
+
+    <div class="form-container" id="form-container">
+        <div class="login-container" id="login-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="login">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+        </div>
+
+        <div class="signup-container" id="signup-container" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" required>
+                </div>
+                <button type="submit" class="login">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+
+
+    <!-- Interface -->
+
+    <div class="interface" id="tracker" style="display: none;">
+        <header>
+            <nav>
+                <div class="left">
+                    <h2 class="h2">Welcome, <span id="user"></span></h2>
+                </div>
+                <div class="right">
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="Interface">
+                <div><br></div>
+                <div class="summary">
+                    <div>
+                        <h1>&#10004; Balance:
+                            <span id="updatedBal">00.00</span>
+                        </h1>
+                    </div>
+                    <br />
+                    <div class="total">
+                        <div>
+                            Total Income:
+                            <div>
+                                <h2 style="color: green;" id="updatedInc">00.00</h2>
+                            </div>
+                        </div>
+                        <hr class="vertical" />
+                        <div>
+                            Total Expenses:
+                            <div>
+                                <h2 style="color: red;" id="updatedExp">00.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr">
+                    <hr>
+                </div>
+                <div class="container2">
+                    <h1>Expense Tracker</h1>
+                    <div class="inputitem">
+                        <p class="label">Entry type:</p>
+                        <select id='itemType'>
+                            <option value="0">Expense</option>
+                            <option value="1">Income</option>
+                        </select>
+                        <select id="expense-category" required>
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="Food">Food</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="container">
+                        <div class="form-box">
+
+                            <form id="expense-form">
+                                <div class="grid-container">
+                                    <div class="grid-item">
+                                        <input type="text" id="expense-name" placeholder="Transaction Name" required />
+                                    </div>
+                                    <div class="grid-item">
+                                        <input type="number" id="expense-amount" placeholder="Amount" required />
+                                    </div>
+                                    <div class="grid-item">
+                                        <input type="date" id="expense-date" required />
+                                    </div>
+                                    <div class="grid-item">
+                                        <button type="submit">Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="expense-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Transaction Name</th>
+                                    <th>Amount</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                    <th>Type</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="expense-list">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="filter">
+                        <label for="filter-category">Filter by Category:</label>
+                        <select id="filter-category">
+                            <option value="All">All</option>
+                            <optgroup label="Expenses">
+                                <option value="Food">Food</option>
+                                <option value="Transport">Transport</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Other">Other</option>
+                            </optgroup>
+                            <optgroup label="Income">
+                                <option value="Home">Home</option>
+                                <option value="Bank">Bank</option>
+                            </optgroup>
+                        </select>
+                        <label for="filter-start-date">Start Date:</label>
+                        <input type="date" id="filter-start-date">
+
+                        <label for="filter-end-date">End Date:</label>
+                        <input type="date" id="filter-end-date">
+                    </div>
+
+                </div>
+            </div>
+            <br><br>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-links">
+                    
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/abhay-narkhede-016376282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+                    <a href="https://x.com/abhiynar2804?t=BxM08wppn4xH36AVnwQjBg&s=09" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com/_abhay_narkhede_?igsh=OTg1c3RicDB1bzM3" target="_blank">Instagram</a>
+                </div>
+                <div class="footer-copy">
+                    &copy; 2023 Expense Tracker. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scriptog.js"></script>
+
+
+</body>
+
+</html>

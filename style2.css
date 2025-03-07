@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Login And Sign Up */
+
+.login-container, .signup-container {
+    width: 90%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 50px 60px 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px rgb(0, 183, 255);
+    background-color: #068488;
+}
+
+.login-container:hover, .signup-container:hover {
+    box-shadow: 1px 1px 50px rgb(0, 183, 255);
+}
+
+h2 {
+    display: block;
+    padding-bottom: 25px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: large;
+    color: rgb(0, 183, 255);
+}
+
+input[type] {
+    color: rgb(0, 183, 255);
+}
+
+.input-group input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 3px solid skyblue;
+}
+
+.login {
+    margin: 20px;
+    padding: 10px;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #00b7ff;
+    color: #fff;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: 1s 0.1s;
+}
+
+.login:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 183, 255);
+}
+
+p {
+    color: #fff;
+    font-size: 200;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 183, 255);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Interface */
+/* Header */
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background: #3c00af;
+    padding: 0 20px;
+}
+
+.h2 {
+    padding: 0;
+}
+
+nav button {
+    background: none;
+    color: #fff;
+    width: 55px;
+    height: 35px;
+    border-radius: 7px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: large;
+}
+
+nav button:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Main */
+/* Summary */
+
+main {
+    background: #6c32cc;
+    padding-top: 60px;
+}
+
+.summary {
+    text-align: center;
+    width: 90%;
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 5%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.233);
+    margin-top: 50px;
+    background: #64baaa;
+    font-size: larger;
+    transition: 0.5s 0.1s;
+}
+
+.summary:hover {
+    padding: 5.5%;
+    font-size: x-large;
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.total > div {
+    width: 100%;
+    max-width: 200px;
+}
+
+.vertical {
+    border-left: 1px solid #8d8d8d;
+    height: 80px;
+}
+
+.hr {
+    border: 0;
+    background: #6b65d3;
+    height: 4px;
+    margin: 40px 84px;
+}
+
+/* Tracker */
+
+.container2 {
+    text-align: center;
+    width: 90%;
+    max-width: 70rem;
+    margin: auto;
+    padding: 5%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.233);
+    background: #64baaa;
+    height: 100%;
+}
+
+h1 + div {
+    gap: 2em;
+}
+
+.inputitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.label {
+    width: 100%;
+    max-width: 10rem;
+    margin: 0;
+    font-weight: bold;
+    font-size: larger;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#expense-form {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+}
+
+.form-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-box:hover {
+    padding: 25px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item input,
+.grid-item select,
+.grid-item button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.grid-item button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Table */
+
+.expense-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.expense-table th, .expense-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.expense-table th {
+    background-color: #f2f2f2;
+}
+
+.expense-table .edit-btn {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.expense-table .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.expense-table .edit-btn:hover, .expense-table .delete-btn:hover {
+    opacity: 0.8;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter label {
+    margin-right: 5px;
+}
+
+.filter input[type="date"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Footer */
+
+.footer-container {
+    background-color: #4b4453;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-links, .footer-social {
+    margin: 40px 0;
+}
+
+.footer-links a, .footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .summary {
+        width: 90%;
+    }
+
+    .container2 {
+        width: 90%;
+    }
+
+    .inputitem {
+        flex-direction: column;
+    }
+
+    .total {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .summary {
+        width: 100%;
+    }
+
+    .container2 {
+        width: 100%;
+    }
+
+    .inputitem {
+        flex-direction: column;
+    }
+
+    .total {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* General Table Styles */
+.expense-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.expense-table th, .expense-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.expense-table th {
+    background-color: #f2f2f2;
+}
+
+.expense-table .edit-btn {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.expense-table .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.expense-table .edit-btn:hover, .expense-table .delete-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Table Styles */
+@media (max-width: 768px) {
+    .expense-table table, .expense-table thead, .expense-table tbody, .expense-table th, .expense-table td, .expense-table tr {
+        display: block;
+    }
+
+    .expense-table thead tr {
+        display: none;
+    }
+
+    .expense-table tr {
+        margin-bottom: 15px;
+    }
+
+    .expense-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .expense-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
