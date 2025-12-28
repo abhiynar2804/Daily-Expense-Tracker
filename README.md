@@ -8,7 +8,7 @@ A simple React-based web app to track daily expenses.
 - Responsive UI
 
 ## Tech Stack
-- React
+- HTML
 - JavaScript
 - CSS
 
